@@ -7,7 +7,7 @@ app.innerHTML = `<h1>Loading NASA Picture of the Day...</h1>`;
 async function fetchAPOD() {
   try {
 const response = await fetch("https://science.nasa.gov/wp-json/wp/v2/apod-basic");
-    const data = await response.json();
+    const data = (await response.json())[0];
 
     if (data.error) {
       app.innerHTML = `<h1>API Error: ${data.error.message}</h1>`;
