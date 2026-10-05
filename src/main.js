@@ -18,7 +18,7 @@ async function fetchAPOD() {
       <main class="container">
         <h1>${data.title}</h1>
         ${data.media_type === 'image' 
-          ? `<img src="${data.url}" alt="${data.title}" />` 
+          ? `<img src="${data.hdurl}" alt="${data.title}" />` 
           : `<iframe src="${data.url}" frameborder="0" allowfullscreen></iframe>`}
         <p class="explanation">${data.explanation}</p>
         <span class="date">${data.date}</span>
